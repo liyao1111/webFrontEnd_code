@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Person(){
+
+        }
+        console.log(Person.prototype);
+        /*
+            每个函数创建后，解析器都会向函数中添加一个属性prototype
+                 这个属性对应这一个对象，就是原型对象
+            如果函数作为普通函数调用则圆形对象没有丝毫用处
+            函数作为构造函数调用时，他所创建的对象都会有一个隐藏的属性
+                指向该构造函数的原型对象 可以通过 __proto__来访问
+
+            Person里的prototype指向 原型对象0x123
+            per 里有一隐函属性也指向0x123
+
+            原型对象相当于公共区域 所有同一个类的实例都可以访问到原型对象
+                可将对象还中的共有内容设置到原型对象中
+            当访问对象的一个方法或属性时，会先在对象自身中寻找，如果没有则去原型对象中寻找
+    
+        以后创建构造函数时，可以将这些对象共有的属性或方法统一添加到构造函数的原型对象中
+        这样不必为每一个对象添加 也不会影响到全局作用域
+
+        */
+       var per = new Person();
+       console.log(per.__proto__);
+       console.log(per.__proto__ == Person.prototype);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

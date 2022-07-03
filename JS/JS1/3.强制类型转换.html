@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var a = 123;
+        console.log(a);
+        console.log(typeof a);
+        /* 
+            转换为string类型
+                tostring方法
+                    xx.tostring()
+                    该方法不会影响原变量 会将转换结果返回
+                调用string（）函数 直接将参数转换为字符串
+        */
+       console.log(typeof a.toString());    
+       a = String(a);
+       console.log(typeof a);
+        /* 转为number
+             number（b）
+             专门转换字符串
+                parsrInt()  整数
+                    可将一字符串中有效的整数内容取出来转换为整数
+                parsrFloat() 浮点数
+              
+        */
+       var b='1234h4ello';
+       console.log(b);
+       console.log(typeof Number(b));    
+       var c= parseInt(b);
+       console.log(typeof parseInt(b) + c );
+
+        /* 转为布尔值
+            调用boolean（）函数
+                数字-->bool
+                    除了0 和NaN 都是true
+                字符串-->bool
+                    除了 空串 null和undefined 都是true
+                对象也会转为true
+            
+        */
+       var d = 123;
+       var e = Boolean(d);
+       console.log(typeof e + e );
+       var f=null;
+       console.log(typeof f + Boolean(f));
+       var g =undefined;
+       console.log(typeof g +  Boolean(g));  
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

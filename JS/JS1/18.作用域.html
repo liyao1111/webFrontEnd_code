@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            全局作用域： 在script标签下的是全局作用域
+                全局作用域有一全局变量 window
+                在全局作用域中 所有定义的对象都是window的属性
+                              所有的函数都是window的方法
+        
+        */
+       var obj = new Object();
+       obj.name = "tom";
+       console.log(window.obj.name );
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

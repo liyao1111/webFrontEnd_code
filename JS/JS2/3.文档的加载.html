@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            alert('hello');
+            var btn2 = document.getElementById('btn2');
+            btn2.ondblclick = function(){
+                alert('双击出现');
+            }
+
+        }
+    </script>
+  
+</head>
+<body>
+    <!-- 
+        浏览器加载一个页面时，是自上而下加载的
+        如果将script写到页面上方 在代码执行时，页面还没有加载
+        将js代码写在页面下方就是为了可以在页面加载完毕后在执行js代码
+     -->
+    <button id="btn">按钮</button>
+    <br>
+    <button id="btn2">双击按钮</button>
+    <script>
+        var btn = document.getElementById('btn');
+        btn.onclick = function(){
+            alert('123');
+        }
+        //onload事件会在整个页面加载完毕后才触发
+        // 为window绑定一个onload事件
+        // window.onload = function(){
+        //     alert('456');
+        // }// 所以如果想将触发写到网页上方就可以将方法写到onload函数里
+
+    </script>
+    
+</body>
+</html>

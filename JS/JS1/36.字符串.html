@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            length 获取字符串长度
+            charAt() 返回指定位置的字符
+                charCodeAt() 返回unicode编码
+            String.fromcharCode() 根据字符编码获取字符
+            contact()连接多个字符串
+            indexOf() 检索一个字符串中是否含有指定内容
+            lastIndexOf() 从后往前找
+            slice() 从字符串截取指定内容 
+            substr(a,b) a开始索引 b是截取长度
+            spilt() 将一字符串拆分为一个数组 
+            toLowCase() 转为小写
+            toUpperCase() 转为大写
+        */
+       var str = "hello js";
+       console.log("length of str:" + str.length);
+       console.log(str.charAt(0));// == str[0]
+       var result = String.fromCharCode(20013);
+       console.log(result);
+       var str2 = "nnnn";
+       var str3 = "mmmm";
+       result =str.concat(str2,str3);
+       console.log(result); 
+
+       result = str.indexOf('he');
+       console.log(result);
+
+       result = str.lastIndexOf('llo');
+       console.log(result);
+
+       result = str.slice(0,4);
+       console.log(result);
+       
+       //也可传递一个负数  表示从后边开始截取
+       result = str.slice(1,-1);
+       console.log(result);
+
+       result = str.substr(0,2);
+       console.log(result);
+
+       result = str.split(' ');
+       console.log(result);
+
+       result = str.toUpperCase();
+       console.log(result);
+
+       
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /* break 可以退出当前循环
+            continue 可以跳过当次循环
+        */
+       var i , j , k;
+       console.log("break");
+       for(i=1;i<4;i++)
+       {
+           console.log(i);
+           for(j=1;j<3;j++)
+           {
+               console.log(j);
+               break;
+           }
+       }
+       console.log("continue");
+       for(i=1;i<4;i++)
+       {
+           console.log(i);
+           for(j=1;j<3;j++)
+           {
+                continue;
+               console.log(j);
+              
+           }
+       }
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

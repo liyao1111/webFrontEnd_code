@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Person(name,age,){
+            this.name = name;
+            this.age = age;
+            // this.sayname = function(){
+            //     console.log("this is : " + this.name);
+            // };
+        }
+        Person.prototype.sayname = function(){
+            console.log("this is :" + this.name);
+        };
+        var per = new Person('tom',18);
+        var per2 = new Person('jack',28);
+        per.sayname();
+        per.sayname();
+        console.log(per.sayname == per2.sayname);
+        // sayname 作为person中的方法 每创建一个person对象都会创建一个sayname方法，过于占用空间
+        //如果将sayname提出来作为全局函数  则污染了全局命名空间
+        //定义在全局作用域中也不安全
+        //改正  将方法定义在Person的原型对象中
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

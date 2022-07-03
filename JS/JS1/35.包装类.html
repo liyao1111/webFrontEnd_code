@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      /*
+        js中提供了三个包装类 可以让基本数据类型转为对象
+            String()
+                可将基本字符串转换为字符串对象
+            Number()
+                将基本数值转为数值对象
+            Boolean()
+                将基本布尔值转为布尔对象
+        但实际应用中根本不适应基本数据类型的对象
+            在比较时会出问题
+      */
+     var num = new Number(3);
+     var str = new String('hello');
+     var bool = new Boolean(true);
+     num.hello = "hi";
+     console.log(typeof(num));
+     console.log(num.hello);
+     /*
+        方法和属性只能添加给对象 不能给基本数据类型
+        当对一些基本数据类型的值调用方法时
+            浏览器会临时使用包装类将其临时转为对象
+     */
+    var s = 123;
+    s = s.toString();
+    console.log("s是：" + typeof(s));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

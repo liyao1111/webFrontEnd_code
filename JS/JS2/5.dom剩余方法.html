@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+            //获取body标签
+            /*
+                document中有一body属性 其保存的是body的引用
+                document.documentElement 保存的是html根标签
+                document.all
+
+            */
+           var body=document.body;
+           console.log(body);
+           var html = document.documentElement;
+           var all = document.all;
+           for(var i=0;i<all.length;i++){
+               console.log(all[i]);
+           }
+           /*
+            document.querySelector() 需要一个选择器的字符串，根据css选择器来查询一个元素节点
+                但只返回第一个
+            document.querySelectorAll 将符合条件的封装到一个数组里
+           */
+          var div = document.querySelector(".box div")
+          console.log(div);
+          var divs = document.querySelectorAll(".box1")
+
+        
+    </script>
+</head>
+<body>
+    <div class="box">
+        <div >1</div>
+        
+    </div>
+    <div></div>
+    
+</body>
+</html>

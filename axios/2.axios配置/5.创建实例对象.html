@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>基本使用</h2>
+        <button>GET</button>
+        <button>POST</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const btn = document.querySelectorAll('button')
+        // 创建实例对象
+        const duanzi = axios.create(
+            {
+                //https://api.apiopen.top/getJoke
+                baseURL:'https://api.apiopen.top',
+                timeout:2000
+            }
+        );
+        // 这duanzi与axios对象的功能基本上是一样的
+        duanzi({
+            url:'/getJoke',
+
+        }).then(
+            (responce) => {console.log(responce) }
+        )
+    </script>
+    
+</body>
+</html>

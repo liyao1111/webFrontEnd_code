@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+            width: 200px;
+            height:200px;
+            background-color: #bfa;
+        }
+    </style>
+    <script>
+       
+        window.onload = function(){
+            var currentStyle = function(element){
+            return element.currentStyle ||document.defaultView.getComputedStyle(element,null) ; 
+            };
+            var box1 = document.getElementById('box1');
+            var btn01 = document.getElementById('btn01');
+            var btn02 = document.getElementById('btn02');
+            var btn03 = document.getElementById('btn03');
+            btn01.onclick = function(){
+                //修改box1宽度
+                /*
+                    通过js修改css元素样式
+                    语法：
+                        元素.style.元素名 = 样式值
+                    若css样式名中含有 - 
+                        使用驼峰命名法 去掉- 把第二个单词首字母大写
+
+                */
+               box1.style.width = '300px';
+               box1.style.backgroundColor = 'red';
+            };
+            btn02.onclick = function(){
+                //读取css样式
+                /*
+                    通过style设置和读取的都是内联样式   无法读取样式表中的样式
+                */
+               alert(box1.style.backgroundColor);
+
+            };
+            btn03.onclick = function(){
+               
+                //获取样式表的样式
+                /*语法：
+                        ie浏览器 元素.currentStyle.样式名
+                        其他浏览器 getComoutedStyle()
+                            需要两个参数  第一个元素名
+                                        第二个可传递一个伪元素  null
+                */
+               //
+               alert(currentStyle(box1).width + currentStyle(box1).backgroundColor);
+
+            };
+        }
+
+
+    </script>
+</head>
+<body>
+    <button id="btn01">设置样式</button>
+    <button id="btn02">读取内联样式</button>
+    <button id="btn03">读取样式表样式</button>
+    
+    <div id="box1"></div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //邮箱格式
+        /*
+            电子邮件的规则   xxxxx.         xxsaxx     @       xxxx             .com      .cn
+                        任意字母数字下划线      *       @       字母数字        .任意字母   *
+                            \w
+                            \w{3，}   (\.\w){0,}    @    [A-z0-9]{2,}    (\.[A-Z]{2,5}){1,2}
+
+        */
+       var emailreg = /^\w{3,}(\.\w){0,}@[A-z0-9]{3,}(\.[A-Z]{2,5}){1,2}$/i;
+       var email = 'abc@abc.com'
+       var result = emailreg.test(email);
+       if(result){
+           console.log("right");
+       }
+       else{
+           console.log("wrong");
+       }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button id="btn01">发送get请求</button>
+        <button id="btn02">发送post请求</button>
+        <button id="btn03">发送put请求</button>
+        <button id="btn04">发送delete请求</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const btns= document.querySelectorAll('button');
+        btns[0].onclick = () => { 
+            // 发送ajax请求
+            axios({ 
+                method:'GET',
+                url:'http://localhost:3000/posts'
+            }).then(
+                (responce) => {console.log(responce) }
+            )
+         }
+         // 添加一篇新的文章
+         btns[1].onclick = () => { 
+             axios(
+                 {
+                     method:'POST',
+                     url:"http://localhost:3000/posts",
+                     // 设置请求体
+                     data:{
+                         title:"今天周一",
+                         author:"tom"
+                     }
+                 }
+             ).then(
+                 (responce) => {console.log(responce) }
+             )
+          }
+          // 更新数据
+          btns[2].onclick = () => { 
+            axios(
+                {
+                    method:'PUT',
+                    url:'http://localhost:3000/posts/3',
+                    data:{
+                        title:"今天是个好日子",
+                        author:'jack'
+                    }
+                }
+            ).then(
+                (responce) => { console.log(responce) }
+            )  
+           }
+           btns[3].onclick = () => { 
+             axios(
+                 {
+                     method:'delete',
+                     url:' http://localhost:3000/posts/3'
+                 }
+             ) .then(
+                 (responce) => { console.log(responce) }
+             ) 
+            }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = '1a2b3c4d5e6f';
+        /*
+            spilt() 将一字符串拆分为一个数组
+            根据任意字母来将字符串拆分
+                方法中可以传递一个正则表达式作为参数
+        */
+       var reg= /[A-z]/i;
+       var result = str.split(reg);
+       console.log(result);
+       /*
+        search() 搜索字符串中是否含有指定内容
+
+       */
+      str2 = 'hello abc hello adc';
+      var reg2 = /a[bd]c/i;
+      result = str2.search(reg2);
+      console.log(result);
+      /*
+        match() 根据正则表达式 从一个字符串中将符合条件的内容提取出来
+            默认情况match找到第一个符合条件的内容就停止
+            设置正则表达式为全局匹配模式就可匹配所有内容
+            正则表达式可设置多个匹配模式 顺序无要求
+        match会将匹配到的内容通过数组返回
+      */
+      str = '1a2b3c4d5e6f';
+      result = str.match(/[A-z]/ig);
+      console.log(result);
+      /*
+        replace(被替换内容，替换内容)  替换
+      */
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

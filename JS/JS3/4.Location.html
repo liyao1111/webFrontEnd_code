@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var btn = document.getElementById('btn');
+            btn.onclick = function(){
+                alert(location);
+                 // 直接打印location  可以获取到地址栏的信息(当前页面的完整路径）
+                 //修改location
+                 location = 'https://www.baidu.com';
+            }
+            /*方法
+                assign()  相当于直接修改location
+                reload() 重新加载当前文档  刷新
+                    参数为true  强制清空缓存刷新
+                replace()
+
+            */
+        }
+    </script>
+</head>
+<body>
+    <button id="btn">click</button>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1{
+             width: 100px;
+             height: 100px;
+             background-color: red;
+        }
+    </style>
+    <script>
+        /*
+            键盘事件
+                onkeydown
+                    如果按着不松手 事件会连续触发
+                除了keycode 还提供了几个属性
+                    altKey
+                    ctrlKey
+                    shiftKey
+                    
+                onkeyup
+            键盘事件一般都会绑定给一些可以获取到焦点的对象 或者是document
+        */ 
+       window.onload = function(){
+        document.onkeydown = function(event){
+          // console.log(event.keyCode);// 获取按键编码
+       };
+       document.onkeyup = function(){
+          // console.log('up');
+       };
+       var input1 = document.getElementById('input1');
+       input1.onkeydown = function(event){
+           console.log(event.keyCode);
+           /* 在文本框中输入内容 属于onkeydowm默认行为
+            如果在onkeydown中取消默认行为 则输入的内容不会出现在文本框中
+           */
+           return false;
+       };
+       var input2 = document.getElementById('input2');
+       input2.onkeydown = function(event){
+           // 让文本框中只能输入数字 不能输入字母
+           // 数字 48-57
+           console.log(event.keyCode);
+           if(event.keyCode <48 || event.keyCode >57){
+               return false;
+           }
+
+       };
+       };
+
+
+    </script>
+</head>
+<body>
+    <div id="box1"></div>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    
+</body>
+</html>

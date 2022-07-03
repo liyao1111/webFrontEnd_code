@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var u1 = document.getElementById('u1');
+            //获取所有的a
+            // var allA = document.getElementsByTagName('a');
+            // for(var i=0;i<allA.length;i++){
+            //     allA[i].onclick = function(){
+            //         alert('a的单击函数！');
+            //     }
+            //}
+            var btn01 = document.getElementById('btn01');
+            btn01.onclick = function(){
+                var li = document.createElement('li');
+                li.innerHTML = "<a href='#' class='link'>超链接1</a>" ;
+                u1.appendChild(li);
+            }
+            /*
+                事件的委派： 将指定的事件同意绑定给元素的共同祖先元素
+            */ 
+            u1.onclick = function(event){
+                //alert('ul的响应函数！');
+                event = event ||window.event;
+                //target  event中的target表示触发事件的对象
+               // alert(event.target);
+                if(event.target.className =='link'){
+                    alert(123);
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+    <button id="btn01">添加超链接</button>
+    <ul id="u1">
+        <!-- /*
+            希望为每一个超链接绑定一个响应函数
+            这里为每一个a都绑定一个函数 且这个操作只能为已有的绑定，新建的无法绑定
+            希望只绑定一次 每个a都可以收到 即使这个a是后添加的
+                可以尝试将其绑定给指定的父元素（祖先元素）
+        */ -->
+        
+        <li><a href="#" class="link">超链接1</a></li>
+        <li><a href="#" class="link">超链接2</a></li>
+        <li><a href="#" class="link">超链接3</a></li>
+
+    </ul>
+    
+</body>
+</html>

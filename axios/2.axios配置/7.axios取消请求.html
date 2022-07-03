@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>axios取消请求</span>
+        <button>发送请求</button>
+        <button>取消请求</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const btn = document.querySelectorAll('button');
+        //2.声明全局变量
+        let cancel = null;
+        
+        // 发送请求
+        btn[0].onclick =() => {
+            axios(
+                {
+                    method:'GET',
+                    url:'http://localhost:3000/posts',
+                    // 1.添加配置对象的请求
+                    cancelToken : new axios.CancelToken((c) => { 
+                        //3.c赋值给cancle
+                        cancel =c;
+
+                     }),
+                }
+            ).then(
+                (responce) => {console.log(responce) },
+                (reason) => {console.log(reason)}
+            )
+        };
+        // 取消请求
+        btn[1].onclick = () => { 
+            cancel();
+         }
+
+    </script>
+
+    
+</body>
+</html>

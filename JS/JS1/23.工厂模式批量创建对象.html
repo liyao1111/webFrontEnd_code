@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fun(){
+           document.write(this.name);
+        }
+        function creatperson(name,gender,age){
+            var obj = new Object;
+            obj.name = name;
+            obj.gender = gender;
+            obj.age = age;
+            obj.sayname = fun;
+            return obj;
+        }
+        var obj2 = creatperson("tom","male",18);
+        var obj4 = creatperson("jack","female",19);
+        obj2.sayname();
+        obj.sayname();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

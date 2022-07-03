@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            检查字符串有a或b
+            reg = /a||b/i
+            []里的内容也是或的关系
+            [ab] == a||b
+            [a-z] 任意小写字母
+            [A-Z]     大写
+            [A-z] 任意字母
+
+        */
+
+       /*
+            abc aec adc 检查
+            a[bde]c
+       */
+
+      /*
+            除了 [^ ] 除了这里面的东西都行
+            [^ab] 除了ab都行
+        */
+
+       var reg = /a||b/i;
+       var str = 'ayry';
+       var str2 = 'vjyyhkjhg';
+       var result = reg.test(str);
+       console.log('a:' + result);
+       result = reg.test(str2);
+       console.log('b:' + result);
+
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

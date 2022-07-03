@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- DOM Dounment Object Model 文档对象模型 -->
+    <!-- Docunment 一个网页就是一个文档
+         Object 将网页每个部分都转换为对象
+         Model 表示对象之间的关系 -->
+    <!-- 节点
+        Node 构成HTML文档最基本的单元
+        常用节点：       nodeName                    nodeType   nodeValue
+            文档节点    整个html文档                    9           null
+            元素节点    html文档中的html标签            1           null
+            属性节点    元素的属性 id class             2           属性值
+            文本节点    html标签中的内容                3           文本内容
+        <p id="pid">this is paragraph</p> 
+    -->
+    <button id="btn">按钮</button>
+    <script>
+        /*浏览器已经提供了文档节点对象  这个对象是window属性
+         可以在页面中直接使用 文档节点代表的是整个网页
+        */ 
+       //获取button对象
+       var btn = document.getElementById('btn');
+       //修改按钮文字
+       btn.innerHTML = "i'm button";
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

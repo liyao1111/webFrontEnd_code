@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var arr=[1,0,3,15,5,6];
+    //push方法 向数组最后插入一个元素 会将数组新的长度作为返回值返回
+    //pop 删除最后一个元素 将被删除的元素作为返回值返回
+    //unshift 向开头添加元素
+    //shift 删除第一个元素并将删除的元素作为返回值返回
+        arr.push(9);
+        console.log(arr);
+    //foreach 数组中有几个元素函数就会执行几次 每次执行时 都会将遍历到的数组元素以实参的形式传进来
+    /*
+        foreach会在回调函数中传递三个参数：
+        1  当前正在遍历到的数组元素
+        2  当前遍历元素的索引
+        3 正在遍历的数组
+    */
+    arr.forEach(function(a){
+        console.log(a);
+    });
+    //slice 从数组中返回指定的元素  slice（start,end)
+    //如果传递一个负值 则从后往前计算   -1倒数第一个  -2倒数第二个
+    
+    console.log(arr.slice(2,5));
+    console.log(arr.slice(-2,-4));
+    //splice 删除指定元素 并将其从原数组中删除 将删除的元素返回
+    /*
+        1 开始的索引位置
+        2 删除的数量
+        3及以后 传递一些新的元素自动插入到开始索引位置的前面
+    */
+   /*
+    sort方法  根据unicode进行排序
+            可以自己指定 规则排序 在sort中指定一回调函数
+            回调函数中定义两个形参 a b
+                浏览器会分别使用数组中的元素作为实参去调用回调函数
+                使用那个元素不确定 但肯定的是数字中的a一定在b前
+            浏览器会根据回掉函数的返回值来决定元素的顺序
+                如果返回一个大于0的值 则元素会交换位置
+                返回一个<0的值 不会交换位置
+                返回一个0 则认为两个元素相等，也不交换
+   */
+  var arr2 = [1,56,262,162,123,567];
+  arr.sort(function(a,b){
+      if(a>b)
+        return 1;
+      else
+        return 0;
+  });
+  console.log(arr2);
+  
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

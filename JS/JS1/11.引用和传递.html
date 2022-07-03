@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            基本数据类型存储在栈中
+            值与值独立存在 修改一个变量不会影响其他变量
+
+            对象（引用类型）保存在堆中 ；每创建一个新对象就会在堆中开辟一个新地址
+                变量保存的是对象的内存地址 若两个变量保存的是一个对象的引用 
+                当一个变量修改属性时，另一个也会受影响
+        */
+        var obj1 = new Object();
+        obj1.name = "tom";
+        obj1.gender = "male";
+        console.log(obj1.gender);
+        var obj2 = obj1;
+        obj2.gender = "female";
+        console.log(obj1.gender);
+
+        var obj3 = new Object();
+        obj3.name = "tom";
+        obj3.gender = "female";
+        console.log(obj1.name == obj3.name);
+        console.log(obj1.gender == obj3.gender);
+        console.log(obj1 == obj3);
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

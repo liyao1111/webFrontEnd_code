@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>GET</button>
+        <button>POST</button>
+        <button>PUT</button>
+        <button>DELETE</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const btn = document.querySelectorAll('button');
+        // get请求
+        btn[0].onclick = () => { 
+          axios.request(
+              {
+                  method:'GET',
+                  url:' http://localhost:3000/comments'
+              }
+          ).then(
+              (responce) => { console.log(responce) }
+          )  
+         }
+         //发送post请求
+         btn[1].onclick = () => { 
+            //axios.post(url,data)
+            axios.post(' http://localhost:3000/comments',
+            {
+                "id": 4,
+                "body": "some comment444",
+                "postId": 1
+            }).then(
+                (responce) => { console.log(responce) }
+            )
+        }
+          
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        // promise
+        // 添加请求拦截器 config是配置对象
+        axios.interceptors.request.use(function (config) {
+            console.log('请求拦截器 成功');
+            return config;
+        }, function (error) {
+            console.log('请求拦截器 失败');
+            return Promise.reject(error);
+        });
+
+        // 添加响应拦截器
+        axios.interceptors.response.use(function (response) {
+            console.log('响应拦截器 成功');
+            return response;
+        }, function (error) {
+            console.log('响应拦截器 失败');
+            return Promise.reject(error);
+        });
+        //发送请求
+        axios(
+            {
+                method:'GET',
+                url:'http://localhost:3000/posts'
+            }
+        ).then(
+            (responce) => {
+                console.log('自定义回调处理成功的结果')
+                console.log(responce)
+            }
+        ).catch((reason) => {console.log('自定义失败回调')})
+    </script>
+
+</body>
+
+</html>

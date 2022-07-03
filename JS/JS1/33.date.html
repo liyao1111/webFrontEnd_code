@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            data对象表示时间
+                如果直接使用构造函数创建一个对象，则会封装为当前代码执行的时间
+            创建一指定的时间对象
+                在构造函数中传入一个表示时间的字符串作为参数
+                    日期格式：  月/日/年 时:分:秒
+
+        */
+       var date = new Date();
+       var date2 = new Date("12/12/2000 11:11:11");
+       console.log(date);
+       console.log(date2);
+       /*
+        getDate()获取当前日期对象是几日
+        getDay() 当前日期是一周中的第几天 0~6
+        getMonth()  0~11
+        getFullyear()
+        
+
+       */
+      console.log("date:" + date2.getDate());
+      console.log("Day:" + date2.getDay());
+      console.log("month:" + date2.getMonth());
+      console.log("year:" + date2.getFullYear());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

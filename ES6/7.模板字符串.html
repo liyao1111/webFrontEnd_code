@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 使用反引号定义
+        let name = `张三`;
+        // 可以解析变量
+        let sayhello = `hello,我的名字是${name}`;
+        console.log(sayhello);
+        
+        let result = {
+            name:'tom',
+            age:'18',
+            sex:'male'
+        }
+        let html = `<div>
+            <span>${result.name}</span>
+            <span>${result.age}</span>
+            <span>${result.sex}</span>
+            </div>`
+        // 可以插入函数
+        function fn(){
+            return '哈哈哈';
+        }
+        let fnn = `${fn()},你好`;
+        console.log('fnn:',fnn);
+
+    </script>
+    
+</body>
+</html>

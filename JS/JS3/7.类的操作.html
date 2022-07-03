@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .b1{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .b2{
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            var box = document.getElementById('box');
+            box.className = 'b1';
+            var btn01 = document.getElementById('btn01');
+            //希望一行代码 修改多个样式
+            // 修改box的class属性
+            btn01.onclick = function(){
+                box.className = 'b2';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="box" class=""></div>
+    <button id="btn01">click</button>
+    
+</body>
+</html>

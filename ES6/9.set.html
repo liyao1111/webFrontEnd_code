@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 类似数组，但成员值唯一 无重复元素
+        const set = new Set([1,2,3,1]);
+        console.log(set);
+        // 可做数组去重
+        let arr =['tom','jack','jerry','tom'];
+        let result = new Set(arr);
+        console.log('arr:',arr);
+        console.log('result:',result);
+        
+        //add(value) 添加值 返回set本身
+        // delete(value)
+        // has(value) 返回布尔值
+        //clear() 清空成员 无返回值
+        
+        // foreach 遍历
+        result.forEach(value=> console.log(value));
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arrlike = {
+            '0':'tom',
+            '1':'jack',
+            '2':'jerry',
+            'length':3
+        }
+        var arrlike2 = {
+            '0':1,
+            '1':2,
+            '2':3,
+            'length':3
+    
+        }
+        //Array.from  伪数组转为真实数组
+        //可以接受第二个参数，对每个元素进行处理然后放入新数组中
+        let arr = Array.from(arrlike);
+        let arr2 = Array.from(arrlike2,items=>items*2);
+        console.log(arrlike);
+        console.log(arr);
+        console.log(arr2);
+        
+        //find方法 找出第一个符合条件的数组成员 没有则返回undefined
+        let arr3 = [
+        {
+                id:1,
+                name:'tom'
+            },
+            {
+                id:2,
+                name:'jack'
+            }
+        ];
+        let target = arr3.find((items,index)=>{
+            return items.id ==2;
+        }
+        )
+        console.log(target);
+        //findindex 找出第一个符合条件的数组成员的位置，没找到则返回-1
+        let arr4 = [1,2,3,4,5,6,7];
+        let index = arr4.findIndex((value,index)=>{
+            return value>2;
+        })
+        //简写形式
+        let index2 = arr4.findIndex(index=>index>2);
+        console.log('index1:',index);
+        console.log('index2:',index2);
+        //includes 数组是否包含某元素
+        
+    </script>
+    
+</body>
+</html>

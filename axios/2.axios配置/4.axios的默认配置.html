@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>GET</button>
+        <button>POST</button>
+        <button>PUT</button>
+        <button>DELETE</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        const btn = document.querySelectorAll('button');
+        axios.default.method = 'GET' // 设置默认请求类型为 get
+        axios.default.baseURL= ' http://localhost:3000 ' // 设置基础url
+        axios.default.params ={id:3000}
+        axios.default.timeout =3000
+        btn[0].onclick = () => { 
+            console.log(123);
+          axios(
+              {
+               url:'/posts'
+                  
+              }
+          ).then(
+              (responce) => {console.log(responce)}
+          )  
+         }
+    </script>
+    
+</body>
+</html>

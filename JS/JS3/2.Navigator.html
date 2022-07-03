@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+            用userAgent来判断浏览器信息
+                userAgent是一个字符串 包含描述浏览器的信息
+                不同浏览器会有不同的userAgent
+        */
+        //alert(window.navigator.userAgent);
+        /*chrome信息
+         Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36
+        */
+       /*edge信息
+       Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36 Edg/99.0.1150.39
+       */   
+       var ua = navigator.userAgent;
+       if(/Chrome/i.test(ua)){
+           alert('this is chrome');
+       }
+       if(/Edg/i.test(ua)){
+           alert('this is edge');
+       }
+       /*
+        如果通过ueragent不能判断 还可通过一些浏览器中特有的对象来判断浏览器信息
+        
+       */
+
+
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

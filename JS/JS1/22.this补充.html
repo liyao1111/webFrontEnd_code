@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var name = "全局name";
+        function fun(){
+            console.log(this.name);
+        }
+        var obj  = {
+            name:'jack',
+            sayname:fun
+        }
+        var obj2 = {
+            name:'tom',
+            sayname:fun
+        }
+        fun();
+        obj.sayname();
+        obj2.sayname();
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

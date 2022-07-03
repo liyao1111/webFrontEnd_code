@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        形参只有一个 可以省略小括号
+        语句只有一句  可以省略大括号
+        箭头函数不绑定this 箭头函数中的this指向的是函数定义位置的上下文this
+        */ 
+        ()=>{
+
+        }
+        let f = a=> console.log(a);
+        f(1);
+        let obj = {name:'tom',age:'18'};
+        function fn(){
+            console.log(this);
+            fffn = ()=>{
+                console.log(this.name);
+            };
+            fffn();
+
+        }
+        let ffn = fn.bind(obj);
+        ffn();
+        
+    </script>
+    
+</body>
+</html>
