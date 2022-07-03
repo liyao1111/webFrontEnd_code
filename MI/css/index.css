@@ -1,0 +1,181 @@
+/* 主页index的样式表 */
+
+/*顶部导航条的容器  */
+.top-bar-wrapper{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    font-size: 12px;
+}
+/* 左侧导航栏 */
+.service,
+.service li,
+.userinfo li{
+    float: left;
+}
+/* 右侧导航栏 */
+.shopcart,
+.userinfo{
+    float:right;
+}
+.line{
+    color:#424242;
+    margin: 0 3.6px;
+}
+.topbar a{
+    color: #b0b0b0;
+    text-decoration: none;
+}
+
+/* 左右三个块的位置 */
+.service{
+    position: relative;
+    left: 137px;
+}
+.userinfo{
+    position: relative;
+    right: 200px;
+}
+.shopcart{
+    position: relative;
+    right: 180px;
+}
+
+/* a转换为块 */
+.service a,
+.userinfo a
+.userinfo a{
+    display: block;
+}
+
+/* 鼠标移到超链接处的状态 */
+.service a:hover,
+.userinfo a:hover{
+    color:#fff;
+
+}
+.shopcart a{
+    display: block;
+    text-align: center;
+    width: 120px;
+}
+.shopcart i{
+    margin-right: 3px;
+}
+.shopcart a:hover{
+    background-color: gray;
+}
+/* 二维码下拉框 */
+.qrcode{
+    display: none;
+    position: absolute;
+    width: 124px;
+    height: 0;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    background-color:#fff;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    left: 490px;
+    /* 为样式开启过渡效果
+        transition: ;
+     */
+     transition: height 3s;  
+     /* 高度发生变化时开启过渡效果 */
+}
+.qrcode span{
+    color: black;
+}
+.qrcode img{
+    width: 90px;
+    margin:14px 17px;
+}
+/* 设置小三角 */
+li:hover .app::after{
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid transparent 10px;
+    border-top: none;
+    border-bottom-color:#fff;
+    top: 30px;
+    left: 535px;
+    
+}
+.app:hover .qrcode{
+    display: block;
+    height: 148px;
+   
+}
+/* 设置header外部样式 */
+.header-wrapper{
+    height: 100px;
+    width: 1190px;
+    margin-left:134px;
+    
+}
+/* 设置logo样式 */
+.logo{
+    width: 55px;
+    height: 55px;
+    background-color:#ff6700;
+    float: left;
+    position: relative;
+    top: 20px;
+    /* left: 135px; */
+    
+}
+.logo a {
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-color: #ff6700;
+}
+.logo img{
+    width: 55px;
+}
+/* header导航栏 */
+
+.header-bar .bar li{
+    float: left;
+    line-height: 100px;
+    font-size: 16px;
+    padding-right: 24px;
+}
+.header-bar .bar{
+    margin-left: 244px;
+}
+.bar a{
+    display: block;
+    height: 50px;
+    text-decoration: none;
+}
+/* 输入框 */
+.input input{
+    position: relative;
+    height: 44px;
+    width: 247px;
+  
+}
+/* 按钮 */
+.input-button i{
+    position: relative;
+    width: 44px;
+    height: 24px;
+    margin-top: 20px;
+}
+.input-button{
+    position: absolute;
+    top: 45px;
+    left: 1268px;
+}
+
+
+
+
+
+
+
